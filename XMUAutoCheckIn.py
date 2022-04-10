@@ -33,7 +33,7 @@ def unix_timestamp() -> int:
     return ts
 
 
-def checkin(cfg: Config, use_vpn=True) -> None:
+def checkin(cfg: Config, use_vpn=False) -> None:
     login_url = VPN_LOGIN_URL if use_vpn else DIRECT_LOGIN_URL
     checkin_url = VPN_CHECKIN_URL if use_vpn else DIRECT_CHECKIN_URL
     driver = webdriver.get()
